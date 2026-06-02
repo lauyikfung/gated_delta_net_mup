@@ -63,9 +63,3 @@ lm-evaluation-harness/lm_eval/prompts/
 lm-evaluation-harness/lm_eval/tasks/*/prompt_*
 
 pretrain.sh
-
-
-# Training scripts (have to personalize scratch space for each user)
-train_adam_finewebedu.py
-train_adam_config.py
-train_adam_openwebtext.py

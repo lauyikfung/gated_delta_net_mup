@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=75.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nanogpt-next"
+version = "0.2.8"
+description = "Training codebase for NanoGPT Pro Project"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "torch==2.5.1",
+  "numpy",
+  "transformers",
+  "datasets>=4,<5",
+  "tiktoken",
+  "wandb",
+  "tqdm",
+  "pydantic>=2.12.5,<3",
+]
+
+[project.optional-dependencies]
+dev = [
+  "accelerate>=0.26.0",
+  "evaluate>=0.4.0",
+  "more-itertools",
+  "peft>=0.2.0",
+  "pre-commit",
+  "ruff",
+  "pyright",
+  "pytest",
+]
+
+[dependency-groups]
+dev = [
+  "accelerate>=0.26.0",
+  "evaluate>=0.4.0",
+  "more-itertools",
+  "peft>=0.2.0",
+  "pre-commit",
+  "ruff",
+  "pyright",
+  "pytest",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["config*", "data*", "inference*", "model*", "utils*"]
+namespaces = true

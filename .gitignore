@@ -1,0 +1,71 @@
+__pycache__/
+.DS_Store
+
+data/openwebtext/*.bin
+data/openwebtext/*.pkl
+data/fineweb-edu/*/*.bin
+data/fineweb-edu/*/*.pkl
+data/arithmetics-addition-fixed_digit/*.bin
+data/arithmetics-addition-fixed_digit/*.pkl
+data/arithmetics-addition-variable_digit/*.bin
+data/arithmetics-addition-variable_digit/*.pkl
+
+.venv/
+venv/
+
+.ruff_cache/
+.pytest_cache/
+.pyright/
+
+*.egg-info/
+
+output/
+wandb/
+
+AGENTS.md
+
+*.tex
+
+# PyTorch model checkpoints
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Logs directory and log files
+logs/
+*.log
+*.out
+*.err
+
+# Core dumps
+core.*
+*.core
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Evaluation harness prompts (don't track prompt files)
+lm-evaluation-harness/lm_eval/prompts/
+lm-evaluation-harness/lm_eval/tasks/*/prompt_*
+
+pretrain.sh
+
+
+# Training scripts (have to personalize scratch space for each user)
+train_adam_finewebedu.py
+train_adam_config.py
+train_adam_openwebtext.py

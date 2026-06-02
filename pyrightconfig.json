@@ -1,0 +1,19 @@
+{
+  "include": ["."],
+  "exclude": [
+    "**/__pycache__",
+    ".venv",
+    "venv",
+    "data",
+    "output",
+    "lm-evaluation-harness",
+    "model",
+    "tools",
+    "train_*.py"
+  ],
+  "venvPath": ".",
+  "venv": ".venv",
+  "pythonVersion": "3.12",
+  "typeCheckingMode": "basic",
+  "reportMissingTypeStubs": "none"
+}

@@ -1,0 +1,30 @@
+minimum_pre_commit_version: "3.8.0"
+exclude: |
+  (?x)^(
+    lm-evaluation-harness/|
+    data/|
+    output/|
+    \\.venv/|
+    venv/|
+    __pycache__/
+  )
+repos:
+  - repo: local
+    hooks:
+      - id: ruff-format
+        name: ruff format
+        entry: uv run ruff format
+        language: system
+        types_or: [python, pyi]
+        args: ["--force-exclude"]
+      - id: ruff-check
+        name: ruff check
+        entry: uv run ruff check
+        language: system
+        types_or: [python, pyi]
+        args: ["--fix", "--force-exclude"]
+      - id: pyright
+        name: pyright
+        entry: uv run pyright
+        language: system
+        pass_filenames: false

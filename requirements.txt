@@ -1,0 +1,8 @@
+torch==2.5.1
+numpy
+transformers
+datasets>=4,<5
+tiktoken
+wandb
+tqdm
+pydantic>=2.12.5,<3

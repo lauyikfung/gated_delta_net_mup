@@ -94,6 +94,7 @@ If you use SDPG in your research or application, please consider citing it!
 @article{liu2026unlocking,
       title={Unlocking Feature Learning in Gated Delta Networks at Scale}, 
       author={Liu, Yifeng and Gu, Quanquan},
-      journal={arXiv preprint arXiv:2606.04048}, 
+      journal={arXiv preprint arXiv:2606.04048},
+      year={2026}
 }
 ```

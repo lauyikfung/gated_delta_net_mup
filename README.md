@@ -1,4 +1,15 @@
-# Codebase for "Unlocking Feature Learning in Gated Delta Networks at Scale"
+# Unlocking Feature Learning in Gated Delta Networks at Scale
+
+[![arXiv](https://img.shields.io/badge/arXiv-2606.04048-b31b1b.svg)](https://arxiv.org/abs/2606.04048)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.6.0-orange.svg) 
+
+Training and scaling Large Language Models demand enormous computational resources, motivating both efficient sub-quadratic architectures and principled hyperparameter tuning methods. While the Maximal Update Parametrization ($\mu$P) has enabled zero-shot hyperparameter transfer for standard Transformers, its extension to linear models, particularly those with structured state transitions and complicated architectures, remains largely unexplored. By rigorously propagating coordinate-size estimates through the forward pass, gating mechanisms, and recurrent state dynamics, we derive the scaling rules for Gated Delta Network. Experiments on language-model pre-training confirm that our configurations enable stable learning-rate transfer across model widths under both AdamW and SGD, whereas standard parametrization fails to transfer, validating the correctness and practical utility of our analysis. This repository implements the paper "[Unlocking Feature Learning in Gated Delta Networks at Scale](https://arxiv.org/abs/2606.04048)".
+
+- Authors: [Yifeng Liu](https://lauyikfung.github.io), [Quanquan Gu](https://web.cs.ucla.edu/~qgu/)
+
+[[Huggingface](https://huggingface.co/papers/2606.04048)]
 
 ## Installation
 
@@ -71,6 +82,18 @@ Pretrain the GPT and other models using the prepared datasets. The provided scri
 Weights & Biases logging is enabled by default. Disable it with `--wandb_log=False` or by setting
 `wandb_log=False` in the config file.
 
-## Acknowledgement
+## Support of Amazon Trainium Chips
 
-The codebase is based on some private repo...
+See [lauyikfung/Amazon_Trainium_Optimizer/gdn_mup_code](https://github.com/lauyikfung/Amazon_Trainium_Optimizer/tree/main/gdn_mup_code) for code implemented with torch-neuronx.
+
+## Citation
+
+If you use SDPG in your research or application, please consider citing it!
+
+```bibtex
+@article{liu2026unlocking,
+      title={Unlocking Feature Learning in Gated Delta Networks at Scale}, 
+      author={Liu, Yifeng and Gu, Quanquan},
+      journal={arXiv preprint arXiv:2606.04048}, 
+}
+```
